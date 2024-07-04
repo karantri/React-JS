@@ -1,45 +1,43 @@
-import React from 'react'
-import { useRef } from 'react'
+import React from 'react';
+import { useRef } from 'react';
 
 function Form() {
+    const inputRef1 = useRef(null);
+    const inputRef2 = useRef(null);
+    const inputRef3 = useRef(null);
+    const inputRef4 = useRef(null);
+    const inputRef5 = useRef(null);
 
-const inputRef = useRef(null)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(`Username: ${inputRef1.current.value}`);
+        alert(`Email-address: ${inputRef2.current.value}`);
+        alert(`Country: ${inputRef3.current.value}`);
+        alert(`Phone: ${inputRef4.current.value}`);
+        alert(`Password: ${inputRef5.current.value}`);
+    };
 
-const handleSubmit = (e)=>{
-    e.preventDefault()
-    alert(`${inputRef.current.value}`)
-}
     return (
         <div>
-            <form action="" onSubmit={handleSubmit}>
-        
-        <label htmlFor="">
-            Username :
-            <input ref={inputRef}/>
-        </label>
-        <br />
-        <label htmlFor="">
-            Email-address :
-            <input ref={inputRef}/>
-        </label>
-        <br />
-        <label htmlFor="">
-            Country :
-            <input ref={inputRef}/>
-        </label>
-        <label htmlFor="">
-            Phone :
-            <input ref={inputRef}/>
-        </label>
-        <label htmlFor="">
-            Password :
-            <input ref={inputRef}/>
-        </label>
-
-        <input type="Submit" name='CREATE ACCOUNT' />
-        </form>
+            <form onSubmit={handleSubmit}>
+               <center>
+               <h1>Registration Form</h1>
+                
+                <input type="text" ref={inputRef1} placeholder='Name'/>
+            <br />
+                <input type="email" ref={inputRef2} placeholder='Email address'/>
+            <br />
+                <input type="text" ref={inputRef3} placeholder='Country'/>
+            <br />
+                <input type="tel" ref={inputRef4} placeholder='Phone'/>
+            <br />
+                <input type="password" ref={inputRef5} placeholder='Password'/>
+            <br />
+            <input type="submit" value="CREATE ACCOUNT"  className='btn'/>
+               </center>
+            </form>
         </div>
-  )
+    );
 }
 
-export default Form
+export default Form;
