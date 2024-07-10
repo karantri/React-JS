@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Person_1 from './Component/Person_1';
+import Person_2 from './Component/Person_2';
+import Person_3 from './Component/Person_3';
+import Person_4 from './Component/Person_4';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+ 
+  <Person_1/>
+  <Person_2/>
+<Person_3/>
+<Person_4/>
+
+   </>
   );
 }
 
