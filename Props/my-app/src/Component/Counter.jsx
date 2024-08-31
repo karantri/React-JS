@@ -19,7 +19,7 @@ function Counter() {
     setCount(count / 5)
   }
   const handleReset = () => {
-    setCount(0)
+    setCount(0) 
   }
 
   return (
@@ -36,8 +36,7 @@ function Counter() {
             <button onClick={handleMultiplication}>multiplication of 5</button>
             <button onClick={handleDivision}>division of 5</button>
           </div>
-          {/* <h2>Enter Any Number </h2>
-          <input type="text" id='input' /> */}
+       
         </div>   
       </div>
     </>
